@@ -1,0 +1,40 @@
+{
+  "fonts": [
+    {
+      "family": "Avenir Next",
+      "style": "sans",
+      "stack": "\"Avenir Next\", Inter, system-ui, sans-serif",
+      "source": "icloud"
+    },
+    {
+      "family": "Baskerville",
+      "style": "serif",
+      "stack": "Baskerville, Georgia, serif",
+      "source": "icloud"
+    },
+    {
+      "family": "Rockwell",
+      "style": "slab",
+      "stack": "Rockwell, \"Roboto Slab\", serif",
+      "source": "icloud"
+    },
+    {
+      "family": "Snell Roundhand",
+      "style": "script",
+      "stack": "\"Snell Roundhand\", \"Brush Script MT\", cursive",
+      "source": "icloud"
+    },
+    {
+      "family": "Impact",
+      "style": "display",
+      "stack": "Impact, \"Arial Black\", sans-serif",
+      "source": "icloud"
+    },
+    {
+      "family": "SF Mono",
+      "style": "mono",
+      "stack": "\"SF Mono\", \"JetBrains Mono\", Consolas, monospace",
+      "source": "icloud"
+    }
+  ]
+}
