@@ -4,8 +4,8 @@ Menu-drevet MVP til generering af font-stil fra et cloud-bibliotek (prototype).
 
 ## Hvad kan den nu?
 
-- Vælge stil (sans/serif/mono)
-- Justere weight, width, kontrast og rounding via menu
+- Vælge stil (sans/serif/slab serif/script/display/mono)
+- Justere hældning, weight, width, kontrast og rounding via menu
 - Live preview af sample-tekst
 - Generere en "font-opskrift" (JSON) som kan bruges af en backend pipeline
 

@@ -1,11 +1,21 @@
 const styleMap = {
   sans: 'Inter, system-ui, sans-serif',
   serif: '"Iowan Old Style", "Times New Roman", Georgia, serif',
+  slab: '"Rockwell", "Roboto Slab", "Courier New", serif',
+  script: '"Brush Script MT", "Segoe Script", "Snell Roundhand", cursive',
+  display: '"Impact", "Haettenschweiler", "Arial Black", sans-serif',
   mono: '"JetBrains Mono", "Fira Code", Consolas, monospace',
+};
+
+const inclinationMap = {
+  upright: { fontStyle: 'normal', slnt: 0, ital: 0 },
+  slanted: { fontStyle: 'oblique', slnt: -10, ital: 0 },
+  italic: { fontStyle: 'italic', slnt: 0, ital: 1 },
 };
 
 const refs = {
   style: document.getElementById('style'),
+  inclination: document.getElementById('inclination'),
   weight: document.getElementById('weight'),
   width: document.getElementById('width'),
   contrast: document.getElementById('contrast'),
@@ -21,11 +31,13 @@ const refs = {
 
 function applyPreview() {
   const style = refs.style.value;
+  const inclination = refs.inclination.value;
   const weight = refs.weight.value;
   const width = refs.width.value;
   const contrast = refs.contrast.value;
   const round = refs.round.value;
   const text = refs.previewText.value.trim();
+  const inclinationAxes = inclinationMap[inclination];
 
   refs.weightValue.value = weight;
   refs.widthValue.value = width;
@@ -33,6 +45,7 @@ function applyPreview() {
   refs.roundValue.value = round;
 
   refs.preview.style.setProperty('--preview-family', styleMap[style]);
+  refs.preview.style.setProperty('--preview-font-style', inclinationAxes.fontStyle);
   refs.preview.style.setProperty('--preview-weight', weight);
   refs.preview.style.setProperty('--preview-width', `${width}%`);
   refs.preview.style.setProperty('--preview-contrast', `${contrast / 100}em`);
@@ -44,11 +57,14 @@ function applyPreview() {
       sourceLibrary: 'Cloud Font Catalog',
       generatedAt: new Date().toISOString(),
       style,
+      inclination,
       axes: {
         wght: Number(weight),
         wdth: Number(width),
         cntr: Number(contrast),
         rnd: Number(round),
+        slnt: inclinationAxes.slnt,
+        ital: inclinationAxes.ital,
       },
       export: {
         format: 'woff2 (MVP)',

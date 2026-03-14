@@ -82,6 +82,7 @@ textarea {
   border: 1px dashed #475569;
   font-size: 2rem;
   font-family: var(--preview-family, sans-serif);
+  font-style: var(--preview-font-style, normal);
   font-weight: var(--preview-weight, 500);
   font-stretch: var(--preview-width, 100%);
   letter-spacing: var(--preview-contrast, 0px);
