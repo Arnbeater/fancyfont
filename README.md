@@ -43,6 +43,8 @@ Du kan enten:
 
 > `style` skal være en af: `sans`, `serif`, `slab`, `script`, `display`, `mono`.
 
+Hurtig start: Du kan bruge den færdige skabelon `font-catalog.json` i repoet direkte i appens upload-felt.
+
 ## Kør lokalt
 
 ```bash
