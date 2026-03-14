@@ -19,6 +19,31 @@
         <form id="controls" class="panel">
           <h2>Menuindstillinger</h2>
 
+          <fieldset>
+            <legend>iCloud bibliotek</legend>
+            <p class="hint">
+              Upload en JSON-fil eksporteret fra dit iCloud fontbibliotek (metadata).
+            </p>
+
+            <label>
+              Biblioteksfil (JSON)
+              <input id="libraryFile" type="file" accept="application/json" />
+            </label>
+
+            <label>
+              Eller indsæt iCloud-delingslink til JSON
+              <input id="libraryUrl" type="url" placeholder="https://.../font-catalog.json" />
+            </label>
+
+            <button id="loadFromUrl" type="button">Hent bibliotek fra link</button>
+            <p id="libraryStatus" class="status" aria-live="polite">Standardkatalog indlæst.</p>
+          </fieldset>
+
+          <label>
+            Font-familie fra bibliotek
+            <select id="catalogFont"></select>
+          </label>
+
           <label>
             Stil
             <select id="style">
